@@ -17,6 +17,7 @@ export class AppComponent implements OnInit
   public cars: Car[] = [];
   public editCar: Car | undefined ;
   public deleteCar!: Car;
+  $router: any;
 
   constructor(private carService: CarService){}
 
@@ -107,6 +108,7 @@ export class AppComponent implements OnInit
       this.deleteCar = car;
       button.setAttribute('data-target', '#deleteCarModal');
     }
+
     container?.appendChild(button);
     button.click();
   }
